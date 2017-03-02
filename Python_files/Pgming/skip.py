@@ -2,5 +2,6 @@
 f = open("file.txt")
 for line in f:
     line = line.rstrip()
-    if line.startswith('From'):
-         print line
+    if not line.startswith('From'):
+        continue
+    print line
